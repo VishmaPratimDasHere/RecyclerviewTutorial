@@ -32,7 +32,7 @@ class MyCustomAdapter(val context: Context, val datalist: MutableList<MainActivi
         fun bind(contact: MainActivity.Person) {
             // Bind the data in contact to the views
             name.text=contact.name
-            age.text= contact.age.toString()
+            age.text= "Age: "+contact.age.toString()
         }
     }
 }

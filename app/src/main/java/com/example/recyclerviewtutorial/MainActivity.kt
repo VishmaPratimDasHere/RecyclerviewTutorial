@@ -1,12 +1,14 @@
 package com.example.recyclerviewtutorial
 
 import MyCustomAdapter
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
+import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.LayoutManager
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,7 +41,7 @@ class MainActivity : AppCompatActivity() {
         //Step 3: Add recyclerview to activity : DONE
         //Step 4: Create custom row XML file to define what a row in recyclerview looks like: DONE
         //Step 5: Create Recyclerview adapter and Viewholder
-        //Step 6: Bind the data to the view in the Viewholder in the
+        //Step 6: Bind the data to the view in the Viewholder in the recyclerview
         var rvApp=findViewById<RecyclerView>(R.id.rvContacts)
         rvApp.adapter=MyCustomAdapter(this,data)
         rvApp.layoutManager=LinearLayoutManager(this)
@@ -49,4 +51,9 @@ class MainActivity : AppCompatActivity() {
         var name: String,
         var age: Int
     )
+
+    fun createBirthday(view: View) {
+        val intent= Intent(this,BirthdayGreetActivity::class.java)
+        startActivity(intent)
+    }
 }
