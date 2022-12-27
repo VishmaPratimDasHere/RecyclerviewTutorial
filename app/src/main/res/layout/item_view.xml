@@ -35,6 +35,6 @@
         app:layout_constraintStart_toStartOf="@id/tvName"
         app:layout_constraintTop_toBottomOf="@id/tvAge"
         android:onClick="createBirthday"
-        tools:text="Create Birthday"/>
+        android:text="Create Birthday"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
